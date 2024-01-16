@@ -61,7 +61,7 @@ const Form = () => {
             </div>
 
             <div className="viewPage">
-                <Link to={'viewData'}>View Page <i className="fa-solid fa-right-from-bracket"></i></Link>
+                <Link to={'/viewData'}>View Page <i className="fa-solid fa-right-from-bracket"></i></Link>
             </div>
 
         </>

@@ -221,6 +221,10 @@ body {
   overflow: hidden;
 }
 
+.rwd-table thead tr td {
+  text-align: center;
+}
+
 .rwd-table tr {
   border-color: #0b3e67;
 }
@@ -344,6 +348,36 @@ h3:after {
     transform: translateX(0)
   }
 }
+
+
+/* delete button css start  */
+
+.deleteData {
+  background-color: #d73344;
+  color: #ffc8d4;
+  border: 0px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  scale: 1;
+}
+
+.deleteData:focus {
+  scale: 0.9;
+}
+
+.editData {
+  background-color: #2ba848;
+  color: #c5ffd3;
+  border: 0px;
+  padding: 5px 8px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  scale: 1;
+}
+
+/* delete button css end */
 
 /*
     Don't look at this last part. It's unnecessary. I was just playing with pixel gradients... Don't judge.

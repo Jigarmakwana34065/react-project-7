@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Form from './Pages/Form';
 import View from './Pages/View';
+import Edit from './Pages/Edit';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Form />} />
-          <Route path='viewData' element={<View />} />
+          <Route path='/viewData' element={<View />} />
+          <Route path='/editData/:id' element={<Edit />} />
         </Routes>
       </BrowserRouter>
     </div>
