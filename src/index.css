@@ -146,6 +146,10 @@ body {
   transform: translateY(-30px);
 }
 
+::placeholder {
+  color: white
+}
+
 /* form css end */
 
 /* table css start */

@@ -29,7 +29,7 @@ const Form = () => {
 
         console.log(allData);
 
-        navigate('viewData', { state: allData })
+        navigate('viewData')
 
     }
 
@@ -41,32 +41,28 @@ const Form = () => {
 
     return (
         <>
-            <div class="container">
+            <div className="container">
                 <h1> User Login </h1>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <div class="form-control">
+                    <div className="form-control">
                         {/* <input type="text" required /> */}
-                        <input type="text" onChange={(e) => setName(e.target.value)} value={name} />
-                        <label> Name </label>
+                        <input type="text" onChange={(e) => setName(e.target.value)} value={name} placeholder='Name'/>
                     </div>
-                    <div class="form-control">
+                    <div className="form-control">
                         {/* <input type="text" required /> */}
-                        <input type="text" onChange={(e) => setEmail(e.target.value)} value={email} />
-                        <label> Email </label>
+                        <input type="text" onChange={(e) => setEmail(e.target.value)} value={email} placeholder='Email'/>
                     </div>
-                    <div class="form-control">
+                    <div className="form-control">
                         {/* <input type="password" required /> */}
-                        <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} />
-                        <label> Password </label>
+                        <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder='Password'/>
                     </div>
-                    <button class="btn" type='submit'>Login</button>
+                    <button className="btn" type='submit'>Login</button>
                 </form>
             </div>
 
             <div className="viewPage">
-                <Link to={'viewData'}>View Page <i class="fa-solid fa-right-from-bracket"></i></Link>
+                <Link to={'viewData'}>View Page <i className="fa-solid fa-right-from-bracket"></i></Link>
             </div>
-
 
         </>
     )

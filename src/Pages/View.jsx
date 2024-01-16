@@ -7,16 +7,18 @@ const View = () => {
 
     useEffect(() => {
         let oldRecord = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')) : []
-
+        
         setRecord(oldRecord)
     }, [])
 
+    console.log(record);
+
     return (
         <>
-            <div class="container">
+            <div className="container">
                 <h1> View Page </h1>
 
-                <table class="rwd-table">
+                <table className="rwd-table">
                     <thead>
                         <tr>
                             <td>Id</td>
@@ -29,7 +31,7 @@ const View = () => {
                         {
                             record.map((val) => {
                                 return (
-                                    <tr>
+                                    <tr key={val.id}>
                                         <td>{val.id}</td>
                                         <td>{val.name}</td>
                                         <td>{val.email}</td>
@@ -44,7 +46,7 @@ const View = () => {
             </div>
 
             <div className="viewPage">
-                <Link to={'/'}>Form<i class="fa-solid fa-angles-left"></i></Link>
+                <Link to={'/'}>Form<i className="fa-solid fa-angles-left"></i></Link>
             </div>
 
         </>
